@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>WeeklyReportMaker</title>
+  </head>
+  <body>
+    <section>
+      <article>
+        <div>
+          <span>名前</span>
+          <input type="text" name="name" id="name" value="" />
+        </div>
+        <div>
+          <p id="topic01"></p>
+          <textarea
+            name="topic01Text"
+            id="topic01Text"
+            cols="60"
+            rows="6"
+          ></textarea>
+        </div>
+        <div>
+          <p id="topic02"></p>
+          <textarea
+            name="topic02Text"
+            id="topic02Text"
+            cols="60"
+            rows="6"
+          ></textarea>
+        </div>
+        <div>
+          <p id="topic03"></p>
+          <textarea
+            name="topic03Text"
+            id="topic03Text"
+            cols="60"
+            rows="6"
+          ></textarea>
+        </div>
+        <div>
+          <p id="topic04"></p>
+          <textarea
+            name="topic04Text"
+            id="topic04Text"
+            cols="60"
+            rows="6"
+          ></textarea>
+        </div>
+        <div>
+          <input type="button" id="generateAndSendBtn" value="生成 & 送信" />
+
+          <input type="button" id="generateBtn" value="生成だけ" />
+        </div>
+        <div>
+          <p>
+            <br />
+            <a href="https://windowsfaq.net/win10-help/mail/default.php"
+              >こことか</a
+            >を参考にして、デフォルトのメーラーを設定している場合、「生成 &
+            送信」で楽々です。
+          </p>
+        </div>
+        <p><br />↓↓↓　生成　↓↓↓<br /></p>
+      </article>
+      <article>
+        <div class="outputAria">
+          <p>送信先</p>
+          <input type="text" id="mailTo" class="readOnlyBox oneClickCopy" />
+          <p>件名</p>
+          <textarea
+            name="sendTitle"
+            id="sendTitle"
+            class="readOnlyBox oneClickCopy"
+            cols="60"
+            rows="1"
+          ></textarea>
+          <p>本文</p>
+          <textarea
+            name="sendBody"
+            id="sendBody"
+            class="readOnlyBox oneClickCopy"
+            cols="60"
+            rows="1"
+          ></textarea>
+        </div>
+        <p>
+          テキストエリアをクリックすれば、コピーで握っている状態になります。そのままペーストすればOKです。
+        </p>
+        <p>
+          名前欄はCookieで保持しています。「生成」を押すたびに更新され、保存期間は一ヶ月です。
+        </p>
+        <p>
+          ※注意：今日の日付で年月・第n週を判定しているので、週明けで生成するとズレます。ペースト後に手動で直してください。
+        </p>
+        <p>
+          ※注意：ブラウザをリロードすると、書いていた内容がすべて消えます
+        </p>
+      </article>
+    </section>
+  </body>
+  <footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script
+      type="text/javascript"
+      language="JavaScript"
+      src="./js/main.js"
+    ></script>
+  </footer>
+</html>
