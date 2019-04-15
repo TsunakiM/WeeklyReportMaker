@@ -48,9 +48,11 @@ jQuery(function() {
   $("#generateAndSendBtn").on("click", function() {
     generateMailContent();
 
+    $("#sendBody").select();
+    document.execCommand("copy");
     mailBody = mailBody.replace(/\n\r?/g, "%0D%0A");
-    location.href =
-      "mailto:" + MAIL_TO + "?subject=" + mailSubject + "&body=" + mailBody;
+    location.href = "mailto:" + MAIL_TO + "?subject=" + mailSubject;
+    // location.hrefはURLからメーラーを起動するが、URLの長さには限界があり、本文が長すぎるとメーラーが起動しないので、本文のみ手動ペーストとした
   });
 
   // 本文生成のみ
